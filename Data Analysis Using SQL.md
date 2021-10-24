@@ -10,40 +10,40 @@
 
 * Show all customer records
 
-   > `SELECT * FROM customers;</span>`
+   `SELECT * FROM customers;</span>`
 
 * Show total number of customers
 
     `SELECT count(*) FROM customers;`
 
-* Show transactions for Chennai market (market code for chennai is Mark001
+* Show transactions for Chennai market (Market code for chennai is Mark001)
 
-    > SELECT * FROM transactions where market_code='Mark001';
+    `SELECT * FROM transactions where market_code='Mark001';`
 
 * Show distrinct product codes that were sold in chennai
 
-    <span style="color:gray">SELECT distinct product_code FROM transactions where market_code='Mark001';</span>
-
+    `SELECT distinct product_code FROM transactions where market_code='Mark001';`
+    
 * Show transactions where currency is US dollars
 
-    <span style="color:gray">SELECT * from transactions where currency="USD";</span>
+    `SELECT * from transactions where currency="USD";`
 
 * Show transactions in 2020 join by date table
 
-    <span style="color:gray">SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;</span>
+    `SELECT transactions.*, date.* FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020;`
 
 * Show total revenue in year 2020,
 
-    <span style="color:gray">SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";</span>
+    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.currency="INR\r" or transactions.currency="USD\r";`
 
 * Show total revenue in year 2020, January Month,
 
-    <span style="color:gray">SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");</span>
+    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and and date.month_name="January" and (transactions.currency="INR\r" or transactions.currency="USD\r");`
 
 * Show total revenue in year 2020 in Chennai
 
-    <span style="color:gray">SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";</span>
+    `SELECT SUM(transactions.sales_amount) FROM transactions INNER JOIN date ON transactions.order_date=date.date where date.year=2020 and transactions.market_code="Mark001";`
 
 * To check for NULL entries 
 
-    <span style="color:gray">SELECT * FROM sales.transactions WHERE market_code IS NULL;</span>
+    `SELECT * FROM sales.transactions WHERE market_code IS NULL;`
