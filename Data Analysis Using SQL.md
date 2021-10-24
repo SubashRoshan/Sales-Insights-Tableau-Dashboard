@@ -1,4 +1,4 @@
-Sales Insights Data Analysis Project
+# Sales Insights Data Analysis Project
 
 # Instructions to setup mysql on your local computer
 
@@ -10,15 +10,15 @@ Sales Insights Data Analysis Project
 
 * Show all customer records
 
-    <span style="color:gray">SELECT * FROM customers;</span>
+   > `SELECT * FROM customers;</span>`
 
 * Show total number of customers
 
-    <span style="color:gray">SELECT count(*) FROM customers;</span>
+    `SELECT count(*) FROM customers;`
 
 * Show transactions for Chennai market (market code for chennai is Mark001
 
-    <span style="color:gray">SELECT * FROM transactions where market_code='Mark001';</span>
+    > SELECT * FROM transactions where market_code='Mark001';
 
 * Show distrinct product codes that were sold in chennai
 
